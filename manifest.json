@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "VozAcessível",
+  "version": "1.0",
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "description": "Uma extensão para o Chrome que lê em alta voz o conteúdo textual das páginas web, com foco em suporte ao idioma português de Portugal. Ideal para pessoas com deficiências visuais ou dificuldades de leitura.",
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

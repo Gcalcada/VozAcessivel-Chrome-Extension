@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VozAcessível</title>
+    <!-- Adicionando a fonte Roboto do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      /* Resetando estilos padrão */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      /* Container para os botões */
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 300px; /* Largura dos botões */
+        gap: 10px; /* Espaçamento entre os botões */
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1; /* Faz com que ambos os botões tenham o mesmo tamanho */
+      }
+
+      #stopText {
+        background-color: #f44336;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      #stopText:hover {
+        background-color: #e53935;
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      #stopText:active {
+        background-color: #c62828;
+      }
+
+      .footer {
+        font-size: 12px;
+        color: #333;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contêiner que envolve os botões -->
+    <div class="button-container">
+      <button id="readText">Ler</button>
+      <button id="stopText">Parar de ler</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
